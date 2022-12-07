@@ -118,6 +118,8 @@ class Parser():
       # print(self.token.getLexema())
       if (self.token.getLexema()):
          self.token.setTipo(Tag.TIPO_NUMERO)
+      else:
+         self.sinalizaErroSintatico('erro: variavel nao declarada antes de atribuição')
       if(self.eat(Tag.ID)):
          if(not self.eat(Tag.OP_ATRIB)):
             self.sinalizaErroSintatico("Esperado \"=\", encontrado " + "\"" + self.token.getLexema() + "\"")
