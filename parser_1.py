@@ -80,7 +80,7 @@ class Parser():
         # COMPLETE AQUI A VALIDACAO SEMANTICA
         
         if (noT.tipo == Tag.TIPO_VAZIO):
-            print("variável não declarada")
+            self.sinalizaErroSintatico("variável não declarada")
 
         if(not self.eat(Tag.SMB_PV)):
             self.sinalizaErroSintatico("Esperado \";\", encontrado " + "\"" + self.token.getLexema() + "\"")
