@@ -1,0 +1,13 @@
+var1 = 10;
+var2 = var1;
+if var1 != 10 then {
+  print var1;
+}
+else { 
+  if 10 == var2 then {
+    print var2;
+  }
+  else { 
+    print 10;
+  }
+}
